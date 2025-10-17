@@ -88,7 +88,7 @@ export class Chesser extends MarkdownRenderChild {
   private cg: Api;
   private chess: Chess;
 
-  private menu: ChesserMenu;
+  private menu: ChesserMenu | null;
   private moves: Move[];
 
   public currentMoveIdx: number;
@@ -171,7 +171,7 @@ export class Chesser extends MarkdownRenderChild {
       });
     }
 
-    this.menu = new ChesserMenu(containerEl, this);
+    this.menu = config.hideMenu ? null : new ChesserMenu(containerEl, this);
   }
 
   private set_style(el: HTMLElement, pieceStyle: string, boardStyle: string) {

@@ -5,6 +5,7 @@ import { App, PluginSettingTab, Setting } from "obsidian";
 
 export interface ChesserSettings {
   orientation: string;
+  hideMenu: boolean;
   viewOnly: boolean;
   drawable: boolean;
   free: boolean;
@@ -14,6 +15,7 @@ export interface ChesserSettings {
 
 export const DEFAULT_SETTINGS: ChesserSettings = {
   orientation: "white",
+  hideMenu: false,
   viewOnly: false,
   drawable: true,
   free: false,
